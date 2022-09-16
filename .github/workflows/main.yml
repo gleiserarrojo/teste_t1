@@ -17,8 +17,9 @@ jobs:
       run: make
 
     - name: installations
-      run: sudo apt-get install cppcheck
-           sudo apt-get install valgrind
+      run: |
+            sudo apt-get install cppcheck
+            sudo apt-get install valgrind
            
     - name: unity
       run: make unity
