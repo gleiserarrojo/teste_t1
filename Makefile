@@ -58,6 +58,17 @@ unity: clean compile run
 
 compile:
 	$(C_COMPILER) $(CFLAGS) $(INC_DIRS) $(SYMBOLS) $(SRC_FILES1) -o $(TARGET1)
+	
+cppcheck:
+	cppcheck --enable=all --suppress=missingIncludeSystem $(SRC_FILES1)
+	
+valgrind:
+	gcc -g -Wall -Wfatal-errors $(SRC_FILES1) -o $(TARGET1) \
+	valgrind --leak-check=full --show-leak-kinds=all ./$(TARGET1)
+	
+sanitizer:
+	gcc -g -Wall -Wfatal-errors -fsanitize=address $(SRC_FILES1) -o $(TARGET1) \
+	./$(TARGET1)
 
 run:
 	- ./$(TARGET1) -v
