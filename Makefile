@@ -67,14 +67,14 @@ valgrind:
 	valgrind --leak-check=full --show-leak-kinds=all ./$(TARGET1)
 	
 sanitizer:
-	gcc -g -Wall -Wfatal-errors -fsanitize=address $(SRC_FILES1) -o $(TARGET1)
+	clang -g -Wall -Wfatal-errors -fsanitize=address $(SRC_FILES1) -o $(TARGET1)
 	./$(TARGET1)
 	
-gcov:
-	gcov -b src/all_tests.c
+gcov: compile run
+	gcov -b foo.c
 
 run:
-	- ./$(TARGET1) -v
+	./$(TARGET1) -v
 
 clean:
 	$(CLEANUP) $(TARGET1)
