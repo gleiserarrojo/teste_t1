@@ -63,12 +63,15 @@ cppcheck:
 	cppcheck --enable=all --suppress=missingIncludeSystem $(SRC_FILES1)
 	
 valgrind:
-	gcc -g -Wall -Wfatal-errors $(SRC_FILES1) -o $(TARGET_BASE1)
-	valgrind --leak-check=full --show-leak-kinds=all ./$(TARGET_BASE1)
+	gcc -g -Wall -Wfatal-errors $(SRC_FILES1) -o $(TARGET1)
+	valgrind --leak-check=full --show-leak-kinds=all ./$(TARGET1)
 	
 sanitizer:
 	gcc -g -Wall -Wfatal-errors -fsanitize=address $(SRC_FILES1) -o $(TARGET1)
 	./$(TARGET1)
+	
+gcov:
+	gcov -b $(TARGET1)
 
 run:
 	- ./$(TARGET1) -v
