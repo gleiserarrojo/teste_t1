@@ -42,7 +42,7 @@ CFLAGS += -Wstrict-prototypes
 CFLAGS += -Wundef
 CFLAGS += -Wold-style-definition
 
-TARGET_BASE1=all_tests
+TARGET_BASE1=meus_testes
 TARGET1 = $(TARGET_BASE1)$(TARGET_EXTENSION)
 SRC_FILES1=\
   src/unity.c \
