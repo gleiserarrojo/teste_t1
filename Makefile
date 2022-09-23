@@ -41,6 +41,7 @@ CFLAGS += -Wno-unknown-pragmas
 CFLAGS += -Wstrict-prototypes
 CFLAGS += -Wundef
 CFLAGS += -Wold-style-definition
+CFLAGS += -fprofile-arcs -ftest-coverage 
 
 TARGET_BASE1=meus_testes
 TARGET1 = $(TARGET_BASE1)$(TARGET_EXTENSION)
