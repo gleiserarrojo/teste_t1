@@ -71,7 +71,7 @@ sanitizer:
 	./$(TARGET1)
 	
 gcov:
-	gcov -b $(SRC_FILES1)
+	gcov -b src/all_tests.c
 
 run:
 	- ./$(TARGET1) -v
