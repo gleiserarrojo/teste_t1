@@ -71,7 +71,7 @@ sanitizer:
 	./$(TARGET1)
 	
 gcov:
-	gcov -b $(TARGET1)
+	gcov -b $(SRC_FILES1)
 
 run:
 	- ./$(TARGET1) -v
