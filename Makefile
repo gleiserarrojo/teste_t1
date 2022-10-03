@@ -43,16 +43,28 @@ CFLAGS += -Wundef
 CFLAGS += -Wold-style-definition
 CFLAGS += -fprofile-arcs -ftest-coverage 
 
-TARGET_BASE1=meus_testes
+TARGET_BASE1=testes
+
 TARGET1 = $(TARGET_BASE1)$(TARGET_EXTENSION)
+
 SRC_FILES1=\
   src/unity.c \
   extras/fixture/src/unity_fixture.c \
-  src/foo.c \
-  src/TestFoo.c \
-  src/TestFoo_Runner.c \
+  src/Material_Apoio/src/bubble_sort.c \
+  src/Material_Apoio/src/counting_sort.c \
+  src/Material_Apoio/src/heap_sort.c \
+  src/Material_Apoio/src/insertion_sort.c \
+  src/Material_Apoio/src/merge_sort.c \
+  src/Material_Apoio/src/quick_sort.c \
+  src/Material_Apoio/src/radix_sort.c \
+  src/Material_Apoio/src/selection_sort.c \
+  src/Material_Apoio/src/sort.c \
+  src/TestSort.c \
+  src/TestSort_Runner.c \
   src/all_tests.c
+
 INC_DIRS=-Isrc -I$(UNITY_ROOT)/src -I$(UNITY_ROOT)/extras/fixture/src
+
 SYMBOLS=
 
 unity: clean compile run
@@ -72,7 +84,7 @@ sanitizer:
 	./$(TARGET1)
 	
 gcov: compile run
-	gcov -b foo.c
+	gcov -b sort.c bubble_sort.c counting_sort.c heap_sort.c insertion_sort.c merge_sort.c quick_sort.c radix_sort.c selection_sort.c
 
 run:
 	./$(TARGET1) -v
