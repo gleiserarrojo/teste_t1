@@ -90,7 +90,7 @@ run:
 	./$(TARGET1) -v
 
 clean:
-	$(CLEANUP) $(TARGET1)
+	$(CLEANUP) $(TARGET1) *.gc*
 
 ci: CFLAGS += -Werror
 ci: compile

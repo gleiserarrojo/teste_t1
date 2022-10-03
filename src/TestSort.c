@@ -5,8 +5,12 @@
 int a[] = {9, 8, 7, 6, 5, 4, 3, 2, 1};
 int b[] = {17, 22};
 int c[] = {13};
-int d[] = {7, 8, 20, 3, 19, 15, 17, 2, 6, 384, 495, 4, 1, 1000, 8945, 5, 0, 1968, 98746, 9};
-int e[] = {7, 8, 20, 3, 19, 15, 17, 2, 6, 384, 495, 4, 1, 1000, 8945, 5, 0, 1968, 98746, 9, 47};
+int d[] = {7, 8, 20, 3, 19, 15, 17, 2, 6, 384, 495, 4, 1, 1000, 8945, 5, 0, 1968, 15000, 9};
+int e[] = {7, 8, 20, 3, 19, 15, 17, 2, 6, 384, 495, 4, 1, 1000, 8945, 5, 0, 1968, 15000, 9, 47};
+int f[] = {5, 32767, 1, 32766, 8};
+int g[] = {-5, -32768, -1, -32767, -8};
+int h[] = {32769, 0, 32768, -32770, -32769};
+
 // int length = sizeof(a) / sizeof(int);
 
 TEST_GROUP(Sort);
@@ -136,4 +140,100 @@ TEST(Sort, LengthMaiorQueVetor)
 TEST(Sort, LengthMenorQueVetor)
 {
   TEST_ASSERT_EQUAL(0, sort(d, 2, (char *)"On", COUNTING));
+}
+
+TEST(Sort, LimiteSuperiorIntCounting){
+  TEST_ASSERT_EQUAL(0, sort(f, 5, (char *)"On", COUNTING));
+}
+
+TEST(Sort, LimiteSuperiorIntRadix){
+  TEST_ASSERT_EQUAL(0, sort(f, 5, (char *)"On", RADIX));
+}
+
+TEST(Sort, LimiteSuperiorIntBubble){
+  TEST_ASSERT_EQUAL(0, sort(f, 5, (char *)"On2", BUBBLE));
+}
+
+TEST(Sort, LimiteSuperiorIntInsertion){
+  TEST_ASSERT_EQUAL(0, sort(f, 5, (char *)"On2", INSERTION));
+}
+
+TEST(Sort, LimiteSuperiorIntSelection){
+  TEST_ASSERT_EQUAL(0, sort(f, 5, (char *)"On2", SELECTION));
+}
+
+TEST(Sort, LimiteSuperiorIntHeap){
+  TEST_ASSERT_EQUAL(0, sort(f, 5, (char *)"Onlogn", HEAP));
+}
+
+TEST(Sort, LimiteSuperiorIntMerge){
+  TEST_ASSERT_EQUAL(0, sort(f, 5, (char *)"Onlogn", MERGE));
+}
+
+TEST(Sort, LimiteSuperiorIntQuick){
+  TEST_ASSERT_EQUAL(0, sort(f, 5, (char *)"Onlogn", QUICK));
+}
+
+TEST(Sort, LimiteInferiorIntCounting){
+  TEST_ASSERT_EQUAL(0, sort(g, 5, (char *)"On", COUNTING));
+}
+
+TEST(Sort, LimiteInferiorIntRadix){
+  TEST_ASSERT_EQUAL(0, sort(g, 5, (char *)"On", RADIX));
+}
+
+TEST(Sort, LimiteInferiorIntBubble){
+  TEST_ASSERT_EQUAL(0, sort(g, 5, (char *)"On2", BUBBLE));
+}
+
+TEST(Sort, LimiteInferiorIntInsertion){
+  TEST_ASSERT_EQUAL(0, sort(g, 5, (char *)"On2", INSERTION));
+}
+
+TEST(Sort, LimiteInferiorIntSelection){
+  TEST_ASSERT_EQUAL(0, sort(g, 5, (char *)"On2", SELECTION));
+}
+
+TEST(Sort, LimiteInferiorIntHeap){
+  TEST_ASSERT_EQUAL(0, sort(g, 5, (char *)"Onlogn", HEAP));
+}
+
+TEST(Sort, LimiteInferiorIntMerge){
+  TEST_ASSERT_EQUAL(0, sort(g, 5, (char *)"Onlogn", MERGE));
+}
+
+TEST(Sort, LimiteInferiorIntQuick){
+  TEST_ASSERT_EQUAL(0, sort(g, 5, (char *)"Onlogn", QUICK));
+}
+
+TEST(Sort, ForaLimitesIntCounting){
+  TEST_ASSERT_EQUAL(0, sort(h, 5, (char *)"On", COUNTING));
+}
+
+TEST(Sort, ForaLimitesIntRadix){
+  TEST_ASSERT_EQUAL(0, sort(h, 5, (char *)"On", RADIX));
+}
+
+TEST(Sort, ForaLimitesIntBubble){
+  TEST_ASSERT_EQUAL(0, sort(h, 5, (char *)"On2", BUBBLE));
+}
+
+TEST(Sort, ForaLimitesIntInsertion){
+  TEST_ASSERT_EQUAL(0, sort(h, 5, (char *)"On2", INSERTION));
+}
+
+TEST(Sort, ForaLimitesIntSelection){
+  TEST_ASSERT_EQUAL(0, sort(h, 5, (char *)"On2", SELECTION));
+}
+
+TEST(Sort, ForaLimitesIntHeap){
+  TEST_ASSERT_EQUAL(0, sort(h, 5, (char *)"Onlogn", HEAP));
+}
+
+TEST(Sort, ForaLimitesIntMerge){
+  TEST_ASSERT_EQUAL(0, sort(h, 5, (char *)"Onlogn", MERGE));
+}
+
+TEST(Sort, ForaLimitesIntQuick){
+  TEST_ASSERT_EQUAL(0, sort(h, 5, (char *)"Onlogn", QUICK));
 }

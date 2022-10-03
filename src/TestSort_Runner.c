@@ -26,4 +26,28 @@ TEST_GROUP_RUNNER(Sort)
   RUN_TEST_CASE(Sort, TestDefault);
   RUN_TEST_CASE(Sort, LengthMaiorQueVetor);
   RUN_TEST_CASE(Sort, LengthMenorQueVetor);
+  RUN_TEST_CASE(Sort, LimiteSuperiorIntCounting);
+  RUN_TEST_CASE(Sort, LimiteSuperiorIntRadix);
+  RUN_TEST_CASE(Sort, LimiteSuperiorIntBubble);
+  RUN_TEST_CASE(Sort, LimiteSuperiorIntInsertion);
+  RUN_TEST_CASE(Sort, LimiteSuperiorIntSelection);
+  RUN_TEST_CASE(Sort, LimiteSuperiorIntHeap);
+  RUN_TEST_CASE(Sort, LimiteSuperiorIntMerge);
+  RUN_TEST_CASE(Sort, LimiteSuperiorIntQuick);
+  // RUN_TEST_CASE(Sort, LimiteInferiorIntCounting);
+  // RUN_TEST_CASE(Sort, LimiteInferiorIntRadix);
+  // RUN_TEST_CASE(Sort, LimiteInferiorIntBubble);
+  // RUN_TEST_CASE(Sort, LimiteInferiorIntInsertion);
+  // RUN_TEST_CASE(Sort, LimiteInferiorIntSelection);
+  // RUN_TEST_CASE(Sort, LimiteInferiorIntHeap);
+  // RUN_TEST_CASE(Sort, LimiteInferiorIntMerge);
+  // RUN_TEST_CASE(Sort, LimiteInferiorIntQuick);
+  RUN_TEST_CASE(Sort, ForaLimitesIntCounting);
+  RUN_TEST_CASE(Sort, ForaLimitesIntRadix);
+  RUN_TEST_CASE(Sort, ForaLimitesIntBubble);
+  RUN_TEST_CASE(Sort, ForaLimitesIntInsertion);
+  RUN_TEST_CASE(Sort, ForaLimitesIntSelection);
+  RUN_TEST_CASE(Sort, ForaLimitesIntHeap);
+  RUN_TEST_CASE(Sort, ForaLimitesIntMerge);
+  RUN_TEST_CASE(Sort, ForaLimitesIntQuick);
 }
