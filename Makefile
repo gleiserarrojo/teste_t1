@@ -83,7 +83,7 @@ sanitizer:
 	clang -g -Wall -Wfatal-errors -fsanitize=address $(SRC_FILES1) -o $(TARGET1)
 	./$(TARGET1)
 	
-gcov: compile run
+gcov: unity
 	gcov -b sort.c bubble_sort.c counting_sort.c heap_sort.c insertion_sort.c merge_sort.c quick_sort.c radix_sort.c selection_sort.c
 
 run:

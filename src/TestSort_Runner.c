@@ -50,4 +50,12 @@ TEST_GROUP_RUNNER(Sort)
   RUN_TEST_CASE(Sort, ForaLimitesIntHeap);
   RUN_TEST_CASE(Sort, ForaLimitesIntMerge);
   RUN_TEST_CASE(Sort, ForaLimitesIntQuick);
+  RUN_TEST_CASE(Sort, ValorMeioIntCounting);
+  // RUN_TEST_CASE(Sort, ValorMeioIntRadix);
+  RUN_TEST_CASE(Sort, ValorMeioIntBubble);
+  RUN_TEST_CASE(Sort, ValorMeioIntInsertion);
+  RUN_TEST_CASE(Sort, ValorMeioIntSelection);
+  RUN_TEST_CASE(Sort, ValorMeioIntHeap);
+  RUN_TEST_CASE(Sort, ValorMeioIntMerge);
+  RUN_TEST_CASE(Sort, ValorMeioIntQuick);
 }

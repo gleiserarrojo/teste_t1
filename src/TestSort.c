@@ -10,6 +10,7 @@ int e[] = {7, 8, 20, 3, 19, 15, 17, 2, 6, 384, 495, 4, 1, 1000, 8945, 5, 0, 1968
 int f[] = {5, 32767, 1, 32766, 8};
 int g[] = {-5, -32768, -1, -32767, -8};
 int h[] = {32769, 0, 32768, -32770, -32769};
+int i[] = {15987, -15987, -267, 267, 0};
 
 // int length = sizeof(a) / sizeof(int);
 
@@ -236,4 +237,36 @@ TEST(Sort, ForaLimitesIntMerge){
 
 TEST(Sort, ForaLimitesIntQuick){
   TEST_ASSERT_EQUAL(0, sort(h, 5, (char *)"Onlogn", QUICK));
+}
+
+TEST(Sort, ValorMeioIntCounting){
+  TEST_ASSERT_EQUAL(0, sort(i, 5, (char *)"On", COUNTING));
+}
+
+TEST(Sort, ValorMeioIntRadix){
+  TEST_ASSERT_EQUAL(0, sort(i, 5, (char *)"On", RADIX));
+}
+
+TEST(Sort, ValorMeioIntBubble){
+  TEST_ASSERT_EQUAL(0, sort(i, 5, (char *)"On2", BUBBLE));
+}
+
+TEST(Sort, ValorMeioIntInsertion){
+  TEST_ASSERT_EQUAL(0, sort(i, 5, (char *)"On2", INSERTION));
+}
+
+TEST(Sort, ValorMeioIntSelection){
+  TEST_ASSERT_EQUAL(0, sort(i, 5, (char *)"On2", SELECTION));
+}
+
+TEST(Sort, ValorMeioIntHeap){
+  TEST_ASSERT_EQUAL(0, sort(i, 5, (char *)"Onlogn", HEAP));
+}
+
+TEST(Sort, ValorMeioIntMerge){
+  TEST_ASSERT_EQUAL(0, sort(i, 5, (char *)"Onlogn", MERGE));
+}
+
+TEST(Sort, ValorMeioIntQuick){
+  TEST_ASSERT_EQUAL(0, sort(i, 5, (char *)"Onlogn", QUICK));
 }
