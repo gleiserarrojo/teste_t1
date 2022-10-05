@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-// Functions
+// Functions    
 void counting_sort(int*, int);
 void radix_sort(int*, int);
 void bubble_sort(int*, int);
