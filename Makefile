@@ -84,7 +84,7 @@ sanitizer:
 	./$(TARGET1)
 	
 gcov: unity
-	gcov -b testes.out-sort.c testes.out-bubble_sort.c testes.out-counting_sort.c testes.out-heap_sort.c testes.out-insertion_sort.c testes.out-merge_sort.c testes.out-quick_sort.c testes.out-radix_sort.c testes.out-selection_sort.c
+	gcov -b sort.c bubble_sort.c counting_sort.c heap_sort.c insertion_sort.c merge_sort.c quick_sort.c radix_sort.c selection_sort.c
 
 run: 
 	./$(TARGET1) -v
