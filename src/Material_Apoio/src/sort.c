@@ -63,6 +63,6 @@ int sort(int* a, int length, char* type, int algorithm) {
             }
     }
     memcpy(a,s,sizeof(int)*(length));
-    free(s);
+    //free(s);
     return status;
 }
