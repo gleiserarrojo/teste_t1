@@ -20,7 +20,7 @@ void counting_sort(int a[], int length){
     
     int b[length]; //this is gonna be our new sorted array
     int j = length - 1;
-    for(i = 1; i < length; i++) {
+    for(i = 0; i < length; i++) {
         b[--c[a[j]]] = a[j];
         j--;
     }    
