@@ -27,11 +27,11 @@ jobs:
     - name: cppcheck
       run: make cppcheck
     
-    #- name: valgrind
-    #  run: make valgrind
+    - name: valgrind
+      run: make valgrind
       
-    #- name: sanitizer
-    #  run: make sanitizer
+    - name: sanitizer
+      run: make sanitizer
 
     - name: gcov
       run: make gcov

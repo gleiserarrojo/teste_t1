@@ -24,7 +24,7 @@ TEST_GROUP_RUNNER(Sort)
   RUN_TEST_CASE(Sort, TestQuickCorreto);
   RUN_TEST_CASE(Sort, TypeErradoQuick);
   RUN_TEST_CASE(Sort, TestDefault);
-  RUN_TEST_CASE(Sort, LengthMaiorQueVetor);
+  // RUN_TEST_CASE(Sort, LengthMaiorQueVetor);
   RUN_TEST_CASE(Sort, LengthMenorQueVetor);
   RUN_TEST_CASE(Sort, LimiteSuperiorIntCounting);
   RUN_TEST_CASE(Sort, LimiteSuperiorIntRadix);
@@ -42,8 +42,8 @@ TEST_GROUP_RUNNER(Sort)
   // RUN_TEST_CASE(Sort, LimiteInferiorIntHeap);
   // RUN_TEST_CASE(Sort, LimiteInferiorIntMerge);
   // RUN_TEST_CASE(Sort, LimiteInferiorIntQuick);
-  RUN_TEST_CASE(Sort, ForaLimitesIntCounting);
-  RUN_TEST_CASE(Sort, ForaLimitesIntRadix);
+  // RUN_TEST_CASE(Sort, ForaLimitesIntCounting);
+  // RUN_TEST_CASE(Sort, ForaLimitesIntRadix);
   RUN_TEST_CASE(Sort, ForaLimitesIntBubble);
   RUN_TEST_CASE(Sort, ForaLimitesIntInsertion);
   RUN_TEST_CASE(Sort, ForaLimitesIntSelection);

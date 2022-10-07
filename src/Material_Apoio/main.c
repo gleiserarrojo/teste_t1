@@ -21,16 +21,16 @@ int main(void)
 	int d[] = {7, 8, 20, 3, 19, 15, 17, 2, 6, 384, 495, 4, 1, 1000, 8945, 5, 0, 1968, 98746, 9};
 	int e[] = {7, 8, 20, 3, 19, 15, 17, 2, 6, 384, 495, 4, 1, 1000, 8945, 5, 0, 1968, 98746, 9, 47};
 	int j[] = {};
-	int length = 0;
+	int length = 9;
 	
 	printf("Unsorted: \n");
-	print_array(j, length);
+	print_array(a, length);
 
-	int status = sort(j, length, (char *)"On2", BUBBLE);
+	int status = sort(a, length, (char *)"On2", INSERTION);
 	printf("Status: %d\n", status);
 	
 	printf("Sorted: \n");
-	print_array(j, length);
+	print_array(a, length);
 
 	return EXIT_SUCCESS;
 }
