@@ -2,8 +2,8 @@
 
 int sort(int* a, int length, char* type, int algorithm) {
     int status = 0;
-    //int *s = (int*)malloc(sizeof(int)*length);
-    memcpy(s,a,sizeof(int)*(length));
+    int *s = (int*)malloc(sizeof(int)*length);
+    memcpy(s,a,sizeof(int)*(length - 1));
     if (length < 2 || length > 20) {
         status = 1;
     }
