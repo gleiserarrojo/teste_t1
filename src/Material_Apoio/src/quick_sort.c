@@ -20,7 +20,7 @@ int partition(TYPE A[], int p, int r) {
     return i;
 }
 void quick_sort(TYPE A[], int p, int r) {
-    if(p <= r) {
+    if(p < r) {
         int t = (rand() % ( r - p + 1) + p);
         swap(TYPE, A[t], A[r]); 
         //Used to avoid O(n^2) worst case
