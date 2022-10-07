@@ -7,7 +7,7 @@ void insertion_sort(TYPE [], int);
 void insertion_sort(TYPE A[], int n) {
     int i, j;
     TYPE temp;
-    
+    int k = 0;
     for(i = 1; i < n; i++) {
         temp = A[i];
         j = i;
