@@ -11,7 +11,7 @@ void heap_sort(TYPE [], int);
 
 void heap_sort(TYPE a[], int length){
     build_max_heap(a, length);
-    int i = length - 2;
+    int i = length - 1;
     do {
         TYPE temp = a[0];
         a[0] = a[i];
