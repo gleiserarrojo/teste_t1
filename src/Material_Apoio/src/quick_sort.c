@@ -8,7 +8,7 @@ void quick_sort(TYPE [], int, int);
 
 int partition(TYPE A[], int p, int r) {
     TYPE x = A[r]; //pivot
-    unsigned int i = p - 1, j;
+    int i = p - 1, j;
     for(j = p; j < r ; j++) {
         if(A[j] <= x) {
             i = i + 1;
@@ -25,7 +25,7 @@ void quick_sort(TYPE A[], int p, int r) {
         swap(TYPE, A[t], A[r]); 
         //Used to avoid O(n^2) worst case
         
-        int q = partition(A, p, r);
+        int q = partition((unsigned int *)A, p, r);
         quick_sort(A, p, q - 1);
         quick_sort(A, q + 1, r);
     }
