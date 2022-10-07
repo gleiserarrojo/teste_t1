@@ -28,7 +28,7 @@ int sort(int* a, int length, char* type, int algorithm) {
                     status = 1;
                 break;
             case INSERTION:
-                if (!strcmp(type,"On"))
+                if (!strcmp(type,"On2"))
                     insertion_sort(s, length);
                 else
                     status = 1;
@@ -40,7 +40,7 @@ int sort(int* a, int length, char* type, int algorithm) {
                     status = 1;
                 break;
             case HEAP:
-                if (!strcmp(type,"Onlogn"))
+                if (!strcmp(type,"On2"))
                     heap_sort(s, length);
                 else
                     status = 1;
