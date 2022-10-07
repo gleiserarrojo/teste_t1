@@ -8,7 +8,7 @@ void quick_sort(TYPE [], int, int);
 
 int partition(TYPE A[], int p, int r) {
     TYPE x = A[r]; //pivot
-    int i = p - 1, j;
+    unsigned int i = p - 1, j;
     for(j = p; j < r ; j++) {
         if(A[j] <= x) {
             i = i + 1;
