@@ -28,13 +28,13 @@ int sort(int* a, int length, char* type, int algorithm) {
                     status = 1;
                 break;
             case INSERTION:
-                if (!strcmp(type,"On2"))
+                if (!strcmp(type,"On"))
                     insertion_sort(s, length);
                 else
                     status = 1;
                 break;
             case SELECTION:
-                if (!strcmp(type,"On"))
+                if (!strcmp(type,"On2"))
                     selection_sort(s, length);
                 else
                     status = 1;
