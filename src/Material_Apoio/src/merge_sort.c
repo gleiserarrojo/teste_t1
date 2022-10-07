@@ -9,7 +9,7 @@ void merge(TYPE A[], int p, int q, int r) {
     int i, j, k;
     int nL = q - p + 1; 
     int nR = r - q;
-
+    int a;
     TYPE *L = malloc(sizeof(TYPE)*nL);
     TYPE *R = malloc(sizeof(TYPE)*nR);
     
