@@ -33,8 +33,8 @@ int sort(int* a, int length, char* type, int algorithm) {
                 else
                     status = 1;
                 break;
-            case INSERTION:
-                if (!strcmp(type,"On2"))
+            case SELECTION:
+                if (!strcmp(type,"On"))
                     selection_sort(s, length);
                 else
                     status = 1;
