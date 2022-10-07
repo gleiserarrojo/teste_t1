@@ -58,7 +58,7 @@ int sort(int* a, int length, char* type, int algorithm) {
                     status = 1;
                 break;
             default:
-                status = 0;
+                status = 1;
                 break;
             }
     }
