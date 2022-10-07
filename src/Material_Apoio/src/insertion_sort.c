@@ -8,7 +8,7 @@ void insertion_sort(TYPE A[], int n) {
     int i, j;
     TYPE temp;
     
-    for(i = 1; i < n; i++) {
+    for(i = 2; i < n; i++) {
         temp = A[i];
         j = i;
         while(j > 0 && A[j-1] > temp) {
