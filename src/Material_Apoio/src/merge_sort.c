@@ -13,7 +13,7 @@ void merge(TYPE A[], int p, int q, int r) {
     TYPE *L = malloc(sizeof(TYPE)*nL);
     TYPE *R = malloc(sizeof(TYPE)*nR);
     
-    for (i = 0; i <= nL; i++)    
+    for (i = 0; i < nL; i++)    
         L[i] = A[p + i];
     
     for (j = 0; j < nR; j++)    
