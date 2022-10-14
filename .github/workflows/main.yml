@@ -21,11 +21,11 @@ jobs:
             sudo apt-get install cppcheck
             sudo apt-get install valgrind
            
-    - name: unity
-      run: make unity
+    #- name: unity
+    # run: make unity
       
-    - name: cppcheck
-      run: make cppcheck
+    #- name: cppcheck
+    #  run: make cppcheck
     
     - name: valgrind
       run: make valgrind
